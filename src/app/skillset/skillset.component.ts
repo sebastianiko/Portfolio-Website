@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skillset',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skillset.component.html',
-  styleUrl: './skillset.component.scss'
+  styleUrls: ['./skillset.component.scss']
 })
 export class SkillsetComponent {
-
+  skills = [
+    { name: 'Angular', icon: 'angular.svg' },
+    { name: 'TypeScript', icon: 'typescript.svg' },
+    { name: 'JavaScript', icon: 'javascript.svg' },
+    { name: 'HTML', icon: 'html.svg' },
+    { name: 'CSS', icon: 'css.svg' },
+    { name: 'Firebase', icon: 'firebase.svg' }
+  ];
 }
