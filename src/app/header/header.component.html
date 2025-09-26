@@ -1,21 +1,46 @@
-<header>
+<header [class.overlay-open]="isMenuOpen">
   <div class="logo-container">
     <img src="assets/img/logo.png" alt="Logo" />
   </div>
 
-  <div class="nav-group">
+  <div class="menu-icon" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="mobile-menu-overlay" [class.open]="isMenuOpen">
+    <div class="close-icon" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+    </div>
     <nav class="main-nav">
       <ul>
         <li><a href="#">About me</a></li>
-        <li><a href="#">Skills</a></li>
+        <li><a href="#">Skill set</a></li>
         <li><a href="#">My work</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
-
     <div class="language-switcher">
-      <span>DE</span>
+      <span class="active">DE</span>
       <span>/</span>
-      <span class="active">EN</span>
+      <span>EN</span>
     </div>
+  </div>
+
+  <div class="nav-group-desktop">
+      <nav class="main-nav">
+          <ul>
+              <li><a href="#">About me</a></li>
+              <li><a href="#">Skill set</a></li>
+              <li><a href="#">My work</a></li>
+          </ul>
+      </nav>
+      <div class="language-switcher">
+          <span class="active">DE</span>
+          <span>/</span>
+          <span>EN</span>
+      </div>
   </div>
 </header>

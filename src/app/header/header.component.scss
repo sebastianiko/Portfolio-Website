@@ -5,75 +5,153 @@
   font-weight: 400;
 }
 
-// Mobile-first base styles
+// Base header styles
 header {
-  width: 100vw;
+  width: 100%;
   height: 117px;
   padding: 0 24px;
   box-sizing: border-box;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 101; // Ensure header is above overlay background but below overlay content
+
+  &.overlay-open .logo-container img {
+    // This filter is generated to turn black into #5988FF.
+    // It might not be perfect for a multi-color logo.
+    filter: invert(55%) sepia(58%) saturate(4574%) hue-rotate(206deg) brightness(100%) contrast(101%);
+  }
 }
 
 .logo-container {
   width: 64px;
   height: 69px;
-
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transition: filter 0.3s ease;
   }
 }
 
-.main-nav {
+// Mobile-first styles
+.menu-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #5988FF;
+  }
+}
+
+.nav-group-desktop {
   display: none;
 }
 
-.language-switcher {
+.mobile-menu-overlay {
   display: none;
+  &.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+
+    .main-nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      font-size: 32px;
+    }
+
+    .language-switcher {
+      display: flex;
+      margin-top: 50px;
+    }
+  }
+}
+
+.close-icon {
+    position: absolute;
+    top: 45px;
+    right: 24px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+    span {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #5988FF;
+        top: 13px;
+
+        &:first-child {
+            transform: rotate(45deg);
+        }
+        &:last-child {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+// Common nav styles
+.main-nav {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    @include montserrat-23-400;
+    text-decoration: none;
+    color: #5988FF;
+  }
+}
+
+.language-switcher {
+  display: flex;
+  gap: 8px;
+  span {
+    @include montserrat-23-400;
+    cursor: pointer;
+    color: #5988FF;
+  }
+  .active {
+    font-weight: 700;
+  }
 }
 
 // Desktop layout
 @media (min-width: 768px) {
-  .nav-group {
+  .menu-icon, .mobile-menu-overlay {
+    display: none !important; // Ensure overlay is not shown on desktop
+  }
+
+  .nav-group-desktop {
     display: flex;
     align-items: center;
     gap: 80px;
   }
 
-  .main-nav {
-    display: block;
-
-    ul {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      gap: 36px;
-    }
-
-    a {
-      @include montserrat-23-400;
-      text-decoration: none;
-      color: #5988ff;
-    }
+  .main-nav ul {
+    gap: 36px;
   }
 
-  .language-switcher {
-    display: flex;
-    gap: 8px;
-
-    span {
-      @include montserrat-23-400;
-      cursor: pointer;
-      color: #5988ff;
-    }
-
-    .active {
-      font-weight: 700;
-    }
+  header.overlay-open .logo-container img {
+      filter: none; // Do not apply filter on desktop
   }
 }
