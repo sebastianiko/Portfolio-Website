@@ -46,10 +46,9 @@
 .hero-photo {
   max-width: 300px;
   margin: 0 auto;
+
   img {
     width: 100%;
-    border-radius: 50%;
-    border: 4px solid #5988FF;
   }
 }
 
@@ -88,10 +87,15 @@
 // --- Desktop Layout ---
 @media (min-width: 768px) {
   :host::before {
-    width: 100vw;
-    height: 100vw; // Use same vw value as width
-    top: -50vw;
-    left: -25vw;
+    // Feste Größe wie in Figma (892px), aber leicht vergrößert,
+    // um die Ränder abzudecken und das Element auf breiten Bildschirmen zu fixieren.
+    width: 892px;
+    height: 892px;
+
+    // Setze die Position neu, um die Ellipse korrekt im Viewport zu halten.
+    // Die Figma-Positionen (-199px links, -71px oben) können hier als feste Werte dienen:
+    top: -76px;
+    left: -199px;
   }
 
   .hero-content {
