@@ -99,6 +99,7 @@
   }
 
   .hero-content {
+    position: relative; // For absolute positioning of children
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
