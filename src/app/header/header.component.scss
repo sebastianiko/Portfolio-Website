@@ -16,12 +16,6 @@ header {
   align-items: center;
   position: relative;
   z-index: 101;
-
-  // When the overlay is open, change the logo color to blue
-  // When the overlay is open, change the logo color to blue
-  &.overlay-open .logo-container img {
-    filter: invert(55%) sepia(58%) saturate(4574%) hue-rotate(206deg) brightness(100%) contrast(101%);
-  }
 }
 
 .logo-container {
@@ -32,9 +26,8 @@ header {
     height: 100%;
     object-fit: contain;
     transition: filter 0.3s ease;
-    // Make logo white by default (assuming original is black)
-    filter: brightness(0) invert(1);
   }
+}
 
 // Mobile-first styles
 .menu-icon {
@@ -46,7 +39,7 @@ header {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: #5988FF;
+    background-color: #5988ff;
   }
 }
 
@@ -96,7 +89,7 @@ header {
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color: #5988FF;
+    background-color: #5988ff;
     top: 13px;
 
     &:first-child {
@@ -119,7 +112,7 @@ header {
   a {
     @include montserrat-23-400;
     text-decoration: none;
-    color: #5988FF;
+    color: #5988ff;
   }
 }
 
@@ -129,7 +122,7 @@ header {
   span {
     @include montserrat-23-400;
     cursor: pointer;
-    color: #5988FF;
+    color: #5988ff;
   }
   .active {
     font-weight: 700;
@@ -151,12 +144,5 @@ header {
 
   .main-nav ul {
     gap: 36px;
-  }
-
-  .logo-container img {
-    // On desktop, the hero background is not there,
-    // so we remove the white filter and make the logo blue.
-    // If the original image was black, this filter makes it blue.
-    filter: invert(55%) sepia(58%) saturate(4574%) hue-rotate(206deg) brightness(100%) contrast(101%) !important;
   }
 }
