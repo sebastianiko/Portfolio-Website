@@ -106,11 +106,19 @@
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 150px; // Adjust padding for desktop
-    height: calc(100vh - 117px);
+  }
+
+  .hero-left {
+    align-self: start; // NEU: Bild oben im Grid ausrichten
   }
 
   .hero-photo {
     max-width: 100%;
+  }
+
+  .hero-photo img {
+    // NEU: Stellt sicher, dass das Bild auf dem Desktop nicht unter die Figma-Mindestgröße fällt
+    min-width: 751.67px;
   }
 
   .hero-text {
