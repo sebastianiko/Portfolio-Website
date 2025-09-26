@@ -14,8 +14,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  z-index: 101;
+  position: absolute; // Changed to absolute for proper layering
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20; // Header context above ellipse (5) but below overlay (100)
+}
+
+.logo-container,
+.menu-icon,
+.nav-group-desktop {
+  position: relative; // Ensure they can have a z-index
+  z-index: 25;
 }
 
 .logo-container {
@@ -26,7 +36,13 @@ header {
     height: 100%;
     object-fit: contain;
     transition: filter 0.3s ease;
+    filter: brightness(0) invert(1); // Default white
   }
+}
+
+header.overlay-open .logo-container img {
+  filter: invert(55%) sepia(58%) saturate(4574%) hue-rotate(206deg)
+    brightness(100%) contrast(101%) !important; // Blue
 }
 
 // Mobile-first styles
@@ -61,7 +77,6 @@ header {
     height: 100vh;
     background-color: white;
     z-index: 100;
-
     .main-nav ul {
       flex-direction: column;
       align-items: center;
@@ -133,7 +148,7 @@ header {
 @media (min-width: 768px) {
   .menu-icon,
   .mobile-menu-overlay {
-    display: none !important; // Ensure overlay is not shown on desktop
+    display: none !important;
   }
 
   .nav-group-desktop {
@@ -144,5 +159,9 @@ header {
 
   .main-nav ul {
     gap: 36px;
+  }
+
+  .logo-container img {
+    filter: brightness(0) invert(1) !important; // White on desktop
   }
 }

@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Montserrat:wght@400;700&display=swap");
+
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
+  overflow-x: hidden; // Prevents horizontal scroll from the ellipse
+
+  // Big blue ellipse background - now a stable circle
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    width: 200vw;
+    height: 200vw; // Use same vw value as width to create a circle
+    top: -150vw;
+    left: -50vw;
+    background: radial-gradient(
+      74.22% 74.22% at 19.79% 22.42%,
+      #5988ff 6.25%,
+      #5988ff 51.56%,
+      #0043f0 100%
+    );
+    border-radius: 50%;
+    transform: rotate(-15deg);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10; // Above the blue ellipse
+  padding: 117px 24px 24px; // 117px for header offset
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-left,
+.hero-right {
+  width: 100%;
+}
+
+.hero-photo {
+  max-width: 300px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid #5988FF;
+  }
+}
+
+.hero-text {
+  text-align: center;
+  color: #5988ff;
+
+  .greeting {
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .title-frontend,
+  .title-developer {
+    font-family: "Baloo 2", cursive;
+    font-weight: 700;
+    line-height: 0.9;
+    margin: 0;
+  }
+
+  .title-frontend {
+    font-size: 64px; // Adjusted for mobile
+  }
+
+  .title-developer {
+    font-size: 58px; // Adjusted for mobile
+  }
+}
+
+.social-scroll-group {
+  display: none; // Hidden on mobile as per instructions
+}
+
+// --- Desktop Layout ---
+@media (min-width: 768px) {
+  :host::before {
+    width: 100vw;
+    height: 100vw; // Use same vw value as width
+    top: -50vw;
+    left: -25vw;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 150px; // Adjust padding for desktop
+    height: calc(100vh - 117px);
+  }
+
+  .hero-photo {
+    max-width: 100%;
+  }
+
+  .hero-text {
+    text-align: left;
+
+    .greeting {
+      font-size: 64px;
+    }
+
+    .title-frontend {
+      font-size: 128px;
+    }
+
+    .title-developer {
+      font-size: 118px;
+    }
+  }
+
+  .social-scroll-group {
+    display: flex;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .scroll-indicator {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #5988ff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .scroll-line {
+      width: 2px;
+      height: 100px;
+      background-color: #5988ff;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    a {
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      color: #5988ff;
+      font-size: 24px;
+    }
+  }
+}
