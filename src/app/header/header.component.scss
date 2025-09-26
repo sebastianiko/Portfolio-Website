@@ -15,11 +15,11 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 101; // Ensure header is above overlay background but below overlay content
+  z-index: 101;
 
+  // When the overlay is open, change the logo color to blue
+  // When the overlay is open, change the logo color to blue
   &.overlay-open .logo-container img {
-    // This filter is generated to turn black into #5988FF.
-    // It might not be perfect for a multi-color logo.
     filter: invert(55%) sepia(58%) saturate(4574%) hue-rotate(206deg) brightness(100%) contrast(101%);
   }
 }
@@ -32,8 +32,9 @@ header {
     height: 100%;
     object-fit: contain;
     transition: filter 0.3s ease;
+    // Make logo white by default (assuming original is black)
+    filter: brightness(0) invert(1);
   }
-}
 
 // Mobile-first styles
 .menu-icon {
@@ -83,28 +84,28 @@ header {
 }
 
 .close-icon {
+  position: absolute;
+  top: 45px;
+  right: 24px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+
+  span {
+    display: block;
     position: absolute;
-    top: 45px;
-    right: 24px;
-    cursor: pointer;
     width: 30px;
-    height: 30px;
+    height: 3px;
+    background-color: #5988FF;
+    top: 13px;
 
-    span {
-        display: block;
-        position: absolute;
-        width: 30px;
-        height: 3px;
-        background-color: #5988FF;
-        top: 13px;
-
-        &:first-child {
-            transform: rotate(45deg);
-        }
-        &:last-child {
-            transform: rotate(-45deg);
-        }
+    &:first-child {
+      transform: rotate(45deg);
     }
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 // Common nav styles
@@ -137,7 +138,8 @@ header {
 
 // Desktop layout
 @media (min-width: 768px) {
-  .menu-icon, .mobile-menu-overlay {
+  .menu-icon,
+  .mobile-menu-overlay {
     display: none !important; // Ensure overlay is not shown on desktop
   }
 
@@ -151,7 +153,10 @@ header {
     gap: 36px;
   }
 
-  header.overlay-open .logo-container img {
-      filter: none; // Do not apply filter on desktop
+  .logo-container img {
+    // On desktop, the hero background is not there,
+    // so we remove the white filter and make the logo blue.
+    // If the original image was black, this filter makes it blue.
+    filter: invert(55%) sepia(58%) saturate(4574%) hue-rotate(206deg) brightness(100%) contrast(101%) !important;
   }
 }
