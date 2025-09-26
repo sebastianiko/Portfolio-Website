@@ -33,22 +33,17 @@ header {
 }
 
 .language-switcher {
-  display: flex;
-  gap: 8px;
-
-  span {
-    @include montserrat-23-400; // Use @include for the mixin
-    cursor: pointer;
-    color: #5988FF;
-  }
-
-  .active {
-    font-weight: 700;
-  }
+  display: none;
 }
 
 // Desktop layout
 @media (min-width: 768px) {
+  .nav-group {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
   .main-nav {
     display: block;
 
@@ -57,13 +52,28 @@ header {
       list-style: none;
       padding: 0;
       margin: 0;
-      gap: 80px;
+      gap: 36px;
     }
 
     a {
-      @include montserrat-23-400; // Use @include for the mixin
+      @include montserrat-23-400;
       text-decoration: none;
-      color: #5988FF;
+      color: #5988ff;
+    }
+  }
+
+  .language-switcher {
+    display: flex;
+    gap: 8px;
+
+    span {
+      @include montserrat-23-400;
+      cursor: pointer;
+      color: #5988ff;
+    }
+
+    .active {
+      font-weight: 700;
     }
   }
 }
