@@ -24,7 +24,7 @@
       #0043f0 100%
     );
     border-radius: 50%;
-    transform: rotate(-15deg);
+    transform: rotate(-81.57deg);
   }
 }
 
@@ -87,13 +87,8 @@
 // --- Desktop Layout ---
 @media (min-width: 768px) {
   :host::before {
-    // Feste Größe wie in Figma (892px), aber leicht vergrößert,
-    // um die Ränder abzudecken und das Element auf breiten Bildschirmen zu fixieren.
     width: 892px;
     height: 892px;
-
-    // Setze die Position neu, um die Ellipse korrekt im Viewport zu halten.
-    // Die Figma-Positionen (-199px links, -71px oben) können hier als feste Werte dienen:
     top: -76px;
     left: -199px;
   }
@@ -109,7 +104,7 @@
   }
 
   .hero-left {
-    align-self: start; // NEU: Bild oben im Grid ausrichten
+    align-self: start;
   }
 
   .hero-photo {
@@ -117,7 +112,6 @@
   }
 
   .hero-photo img {
-    // NEU: Stellt sicher, dass das Bild auf dem Desktop nicht unter die Figma-Mindestgröße fällt
     min-width: 751.67px;
   }
 
@@ -144,22 +138,29 @@
     bottom: 50px;
     align-items: center;
     gap: 3rem;
+    height: 330px;
+    flex-direction: column;
   }
 
   .scroll-indicator {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
     color: #5988ff;
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-grow: 1;
+    flex-direction: column;
+
+    span {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
 
     .scroll-line {
       width: 2px;
-      height: 100px;
       background-color: #5988ff;
+      flex-grow: 1;
     }
   }
 
