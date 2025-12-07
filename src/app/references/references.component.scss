@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo&family=Montserrat:wght@400;700&display=swap');
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.references-section {
+  width: 100%;
+  min-height: 532px;
+  background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  color: #FFFFFF;
+  font-family: 'Baloo', cursive;
+  font-size: 45px;
+  line-height: 141%;
+  margin: 0 0 10px 0;
+}
+
+p {
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  line-height: 141%;
+  margin: 0 0 40px 0;
+}
+
+.references-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1035px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.reference-block {
+  flex: 1 1 300px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: left;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-surname, .project-name {
+  background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.name-surname {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.project-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 1024px) {
+  .references-section {
+    padding: 80px 20px;
+  }
+  .references-carousel {
+    gap: 24px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .references-section {
+    padding: 60px 20px;
+  }
+  .reference-block {
+    flex: 1 1 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .name-container {
+    align-items: center;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .name-surname {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 16px;
+  }
+}
