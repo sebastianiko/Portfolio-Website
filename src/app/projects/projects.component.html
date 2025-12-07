@@ -1,0 +1,25 @@
+
+<section class="projects-section">
+  <div class="decorative-circle"></div>
+  <h2>My work</h2>
+  <p>A selection of my projects.</p>
+  <div class="projects-list">
+    <div *ngFor="let project of projects; let i = index" 
+         class="project-item" 
+         [ngClass]="(i % 2 !== 0) ? 'odd' : 'even'">
+      <div class="project-image" [style.background-image]="'url(' + project.imageUrl + ')'"></div>
+      <div class="project-description">
+        <h3>{{ project.title }}</h3>
+        <div class="technologies">
+          <span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
+        </div>
+        <p>{{ project.description }}</p>
+        <div class="project-links">
+          <a [href]="project.liveUrl" target="_blank" class="btn-primary">Live</a>
+          <a [href]="project.githubUrl" target="_blank" class="btn-secondary">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="decorative-circle"></div>
+</section>

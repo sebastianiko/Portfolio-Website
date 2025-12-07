@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { SkillsetComponent } from './skillset/skillset.component';
-import { MyWorkComponent } from './my-work/my-work.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -17,7 +17,7 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     HeroSectionComponent,
     SkillsetComponent,
-    MyWorkComponent,
+    ProjectsComponent,
     ContactComponent,
     FooterComponent,
   ],
