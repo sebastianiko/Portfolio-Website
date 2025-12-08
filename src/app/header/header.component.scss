@@ -8,8 +8,8 @@
 // Base header styles
 header {
   width: 100%;
-  height: 117px;
-  padding: 0 24px;
+  height: 143px; // Figma mobile height
+  padding: 37px 25px; // Figma mobile padding
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -19,6 +19,8 @@ header {
   left: 0;
   width: 100%;
   z-index: 20; // Header context above ellipse (5) but below overlay (100)
+  backdrop-filter: blur(32.5px);
+  -webkit-backdrop-filter: blur(32.5px); // Webkit prefix for compatibility
 }
 
 .logo-container,
@@ -50,12 +52,17 @@ header.overlay-open .logo-container img {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  justify-content: space-between;
+  gap: 14px; // Figma gap
+  width: 30px;
+  height: 27.72px; // Figma height
   span {
     display: block;
     width: 30px;
-    height: 3px;
-    background-color: #5988ff;
+    height: 0px; // Use height: 0px because the border creates the line
+    border-top: 2px solid #5988ff; // Use border for the line
+    background-color: transparent; // Ensure no background color interferes
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 }
 
