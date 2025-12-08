@@ -2,30 +2,14 @@
 
 :host {
   display: block;
-  position: relative;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
-  overflow-x: hidden; // Prevents horizontal scroll from the ellipse
+}
 
-  // Big blue ellipse background - now a stable circle
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 5;
-    width: 200vw;
-    height: 200vw; // Use same vw value as width to create a circle
-    top: -150vw;
-    left: -50vw;
-    background: radial-gradient(
-      74.22% 74.22% at 19.79% 22.42%,
-      #5988ff 6.25%,
-      #5988ff 51.56%,
-      #0043f0 100%
-    );
-    border-radius: 50%;
-    transform: rotate(-81.57deg);
-  }
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
 }
 
 .hero-content {
@@ -84,15 +68,39 @@
   display: none; // Hidden on mobile as per instructions
 }
 
+// --- Ellipse Styles ---
+.ellipse {
+  position: absolute;
+  background-color: #5988FF;
+  filter: blur(100px);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.ellipse1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+}
+
+.ellipse2 {
+  width: 400px;
+  height: 400px;
+  bottom: -150px;
+  right: -150px;
+}
+
+.ellipse3 {
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // --- Desktop Layout ---
 @media (min-width: 768px) {
-  :host::before {
-    width: 892px;
-    height: 892px;
-    top: -76px;
-    left: -199px;
-  }
-
   .hero-content {
     position: relative; // For absolute positioning of children
     display: grid;

@@ -7,12 +7,9 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <section class="projects-section">
-      <div class="decorative-ellipse ellipse-4"></div>
-      <div class="decorative-ellipse ellipse-9"></div>
-      <div class="decorative-ellipse ellipse-10"></div>
-      <div class="decorative-ellipse ellipse-11"></div>
-      <div class="decorative-ellipse ellipse-12"></div>
-      <div class="decorative-ellipse ellipse-7"></div>
+      <div class="ellipse ellipse1"></div>
+      <div class="ellipse ellipse2"></div>
+      <div class="ellipse ellipse3"></div>
 
       <h2 class="title-my-work">My work</h2>
       <p class="subtitle-text">A selection of my projects.</p>
@@ -43,7 +40,6 @@ import { CommonModule } from '@angular/common';
     :host {
       display: block;
       padding: 60px 20px;
-      background-color: #fff;
     }
 
     .projects-section {
@@ -52,7 +48,6 @@ import { CommonModule } from '@angular/common';
       text-align: center;
       position: relative;
       overflow: hidden;
-      height: 2700px; /* Approximate height for ellipse positioning */
     }
 
     .title-my-work {
@@ -62,6 +57,8 @@ import { CommonModule } from '@angular/common';
       letter-spacing: 0.01em;
       color: #5988FF;
       margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
     }
 
     .subtitle-text {
@@ -70,12 +67,16 @@ import { CommonModule } from '@angular/common';
       line-height: 120%;
       color: #000000;
       margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
     }
 
     .projects-list {
       display: flex;
       flex-direction: column;
       gap: 150px;
+      position: relative;
+      z-index: 1;
     }
 
     .project-item {
@@ -162,58 +163,35 @@ import { CommonModule } from '@angular/common';
       color: white;
     }
     
-    .decorative-ellipse {
-        position: absolute;
-        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
-        z-index: -1;
+    .ellipse {
+      position: absolute;
+      background-color: #5988FF;
+      filter: blur(100px);
+      border-radius: 50%;
+      z-index: -1;
     }
 
-    .ellipse-4 {
-        width: 393.32px;
-        height: 393.32px;
-        left: 0px;
-        top: 177px;
-        transform: rotate(81.57deg);
+    .ellipse1 {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      left: -100px;
     }
 
-    .ellipse-9 {
-        width: 652.16px;
-        height: 652.16px;
-        right: -300px;
-        top: 462px;
-        transform: rotate(81.57deg);
-    }
-    
-    .ellipse-10 {
-        width: 51px;
-        height: 51px;
-        left: 323px;
-        top: 910px;
+    .ellipse2 {
+      width: 400px;
+      height: 400px;
+      bottom: -150px;
+      right: -150px;
     }
 
-    .ellipse-11 {
-        width: 237.84px;
-        height: 237.84px;
-        left: 354px;
-        top: 1351px;
-        transform: rotate(81.57deg);
+    .ellipse3 {
+      width: 250px;
+      height: 250px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    
-    .ellipse-12 {
-        width: 98px;
-        height: 98px;
-        right: 150px;
-        top: 1742px;
-    }
-
-    .ellipse-7 {
-        width: 108.75px;
-        height: 108.75px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 2395px;
-    }
-
 
     /* --- Responsive --- */
     @media (max-width: 767px) {
