@@ -1,123 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 .footer {
-position: relative;
-width: 100%;
-height: 289px;
-padding: 0 50px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-color: #FFFFFF;
-font-family: 'Montserrat', sans-serif;
-background: radial-gradient(ellipse at top left, #5988FF 0%, #5988FF 50%, #0043F0 100%);
+  position: relative;
+  height: 289px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  background: radial-gradient(
+    ellipse at top left,
+    #5988ff 0%,
+    #5988ff 50%,
+    #0043f0 100%
+  );
 }
 
 .footer-content {
-width: 100%;
-max-width: 1240px;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-logo {
-flex: 1;
-display: flex;
-justify-content: flex-start;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .footer-center {
-flex: 1;
-text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .copyright {
-font-size: 23px;
-margin: 0;
+  font-size: 23px;
+  margin: 0;
 }
 
 .footer-social {
-flex: 1;
-display: flex;
-justify-content: flex-end;
-align-items: center;
-gap: 30px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
 }
 
 .footer-social a {
-color: white;
-text-decoration: none;
-transition: transform 0.3s ease;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
 .footer-social a:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .legal-notice {
-position: absolute;
-bottom: 40px;
-left: 50%;
-transform: translateX(-50%);
-color: #FFFFFF;
-font-size: 16px;
-text-decoration: underline;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: underline;
 }
 
 /* --- Mobile Layout --- */
 @media (max-width: 768px) {
-.footer {
-height: 380px;
-padding: 40px 20px;
-/* KORRIGIERT: Footer zentriert den gesamten Inhalt vertikal */
-justify-content: center;
-/* Der Legal Notice Link muss jetzt als Teil des gestapelten Inhalts zentriert werden */
-}
+  .footer {
+    height: 380px;
+    padding: 0;
+    /* KORRIGIERT: Footer zentriert den gesamten Inhalt vertikal */
+    justify-content: center;
+    /* Der Legal Notice Link muss jetzt als Teil des gestapelten Inhalts zentriert werden */
+  }
 
-.footer-content {
-flex-direction: column;
-/* KORRIGIERT: Setzt den vertikalen Abstand zwischen Logo, Copyright und Socials */
-gap: 20px;
-/* Der Inhalt selbst soll mittig im Footer liegen */
-justify-content: center;
-}
+  .footer-content {
+    flex-direction: column;
+    /* KORRIGIERT: Setzt den vertikalen Abstand zwischen Logo, Copyright und Socials */
+    gap: 20px;
+    /* Der Inhalt selbst soll mittig im Footer liegen */
+    justify-content: center;
+  }
 
-.footer-logo {
-/* KORRIGIERT: Zentriert das Logo horizontal in seinem 100% breiten Container */
-margin: 0 auto;
-}
+  .footer-logo {
+    /* KORRIGIERT: Zentriert das Logo horizontal in seinem 100% breiten Container */
+    margin: 0 auto;
+  }
 
-.footer-logo,
-.footer-center,
-.footer-social {
-/* Stellt sicher, dass diese Elemente auf Mobile den Flex-Flow folgen */
-flex: none;
-width: 100%; /* Erlaubt die horizontale Zentrierung */
-justify-content: center; /* Zentriert die Icons horizontal */
-}
+  .footer-logo,
+  .footer-center,
+  .footer-social {
+    /* Stellt sicher, dass diese Elemente auf Mobile den Flex-Flow folgen */
+    flex: none;
+    width: 100%; /* Erlaubt die horizontale Zentrierung */
+    justify-content: center; /* Zentriert die Icons horizontal */
+  }
 
-.footer-center {
-/* Zentriert den Copyright Text */
-text-align: center;
-}
+  .footer-center {
+    /* Zentriert den Copyright Text */
+    text-align: center;
+  }
 
-.footer-social {
-order: 1;
-gap: 42px; /* Figma Abstand */
-}
+  .footer-social {
+    order: 1;
+    gap: 42px; /* Figma Abstand */
+  }
 
-.copyright {
-order: 0;
-}
+  .copyright {
+    order: 0;
+  }
 
-.legal-notice {
-/* KORRIGIERT: Nimmt den Link aus der absoluten Positionierung und macht ihn zum Teil des gestapelten Inhalts */
-position: static;
-transform: none;
-order: 2;
-margin-top: 30px; /* Abstand zum Social-Icon */
-text-align: center;
-}
+  .legal-notice {
+    /* KORRIGIERT: Nimmt den Link aus der absoluten Positionierung und macht ihn zum Teil des gestapelten Inhalts */
+    position: static;
+    transform: none;
+    order: 2;
+    margin-top: 30px; /* Abstand zum Social-Icon */
+    text-align: center;
+  }
 }
