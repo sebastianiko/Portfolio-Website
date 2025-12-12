@@ -1,108 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.footer {
+position: relative;
+width: 100%;
+height: 289px;
+padding: 0 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: #FFFFFF;
+font-family: 'Montserrat', sans-serif;
+background: radial-gradient(ellipse at top left, #5988FF 0%, #5988FF 50%, #0043F0 100%);
+}
 
-    .footer {
-      position: relative;
-      width: 100%;
-      height: 289px;
-      padding: 0 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #FFFFFF;
-      font-family: 'Montserrat', sans-serif;
-      background: radial-gradient(ellipse at top left, #5988FF 0%, #5988FF 50%, #0043F0 100%);
-    }
+.footer-content {
+width: 100%;
+max-width: 1240px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
 
-    .footer-content {
-      width: 100%;
-      max-width: 1240px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.footer-logo {
+flex: 1;
+display: flex;
+justify-content: flex-start;
+}
 
-    .footer-logo {
-      flex: 1;
-      display: flex;
-      justify-content: flex-start;
-    }
+.footer-center {
+flex: 1;
+text-align: center;
+}
 
-    .footer-center {
-      flex: 1;
-      text-align: center;
-    }
-    
-    .copyright {
-      font-size: 23px;
-      margin: 0;
-    }
+.copyright {
+font-size: 23px;
+margin: 0;
+}
 
-    .footer-social {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 30px;
-    }
+.footer-social {
+flex: 1;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+gap: 30px;
+}
 
-    .footer-social a {
-      color: white;
-      text-decoration: none;
-      transition: transform 0.3s ease;
-    }
-    
-    .footer-social a:hover {
-        transform: scale(1.1);
-    }
+.footer-social a {
+color: white;
+text-decoration: none;
+transition: transform 0.3s ease;
+}
 
-    .legal-notice {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #FFFFFF;
-      font-size: 16px;
-      text-decoration: underline;
-    }
+.footer-social a:hover {
+transform: scale(1.1);
+}
 
-    /* --- Mobile Layout --- */
-    @media (max-width: 768px) {
-      .footer {
-        height: 380px;
-        padding: 40px 20px;
-        justify-content: flex-start;
-      }
+.legal-notice {
+position: absolute;
+bottom: 40px;
+left: 50%;
+transform: translateX(-50%);
+color: #FFFFFF;
+font-size: 16px;
+text-decoration: underline;
+}
 
-      .footer-content {
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-        height: auto;
-      }
-      
-      .footer-logo,
-      .footer-center,
-      .footer-social {
-          flex: none;
-      }
+/* --- Mobile Layout --- */
+@media (max-width: 768px) {
+.footer {
+height: 380px;
+padding: 40px 20px;
+/* KORRIGIERT: Footer zentriert den gesamten Inhalt vertikal */
+justify-content: center;
+/* Der Legal Notice Link muss jetzt als Teil des gestapelten Inhalts zentriert werden */
+}
 
-      .footer-social {
-        order: 1; /* Comes after copyright in vertical layout */
-        gap: 42px;
-        margin-bottom: 30px; /* Space before legal notice */
-      }
+.footer-content {
+flex-direction: column;
+/* KORRIGIERT: Setzt den vertikalen Abstand zwischen Logo, Copyright und Socials */
+gap: 20px;
+/* Der Inhalt selbst soll mittig im Footer liegen */
+justify-content: center;
+}
 
-      .copyright {
-        order: 0;
-      }
+.footer-logo {
+/* KORRIGIERT: Zentriert das Logo horizontal in seinem 100% breiten Container */
+margin: 0 auto;
+}
 
-      .legal-notice {
-        position: static;
-        transform: none;
-        order: 2;
-        margin-top: auto; /* Pushes to the bottom */
-      }
-    }
-  
+.footer-logo,
+.footer-center,
+.footer-social {
+/* Stellt sicher, dass diese Elemente auf Mobile den Flex-Flow folgen */
+flex: none;
+width: 100%; /* Erlaubt die horizontale Zentrierung */
+justify-content: center; /* Zentriert die Icons horizontal */
+}
+
+.footer-center {
+/* Zentriert den Copyright Text */
+text-align: center;
+}
+
+.footer-social {
+order: 1;
+gap: 42px; /* Figma Abstand */
+}
+
+.copyright {
+order: 0;
+}
+
+.legal-notice {
+/* KORRIGIERT: Nimmt den Link aus der absoluten Positionierung und macht ihn zum Teil des gestapelten Inhalts */
+position: static;
+transform: none;
+order: 2;
+margin-top: 30px; /* Abstand zum Social-Icon */
+text-align: center;
+}
+}
