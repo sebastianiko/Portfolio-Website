@@ -1,34 +1,39 @@
 <section class="projects-section">
+  <div class="ellipse ellipse1"></div>
+  <div class="ellipse ellipse2"></div>
+  <div class="ellipse ellipse3"></div>
 
-  <h2 class="title-my-work">My work</h2>
-  <p class="subtitle-text">A selection of my projects.</p>
+  <div class="projects-content">
+    <h2 class="title-my-work">My work</h2>
+    <p class="subtitle-text">A selection of my projects.</p>
 
-  <div class="projects-list">
-    <div
-      *ngFor="let project of projects; let i = index"
-      class="project-item"
-      [ngClass]="i % 2 !== 0 ? 'odd' : 'even'"
-    >
+    <div class="projects-list">
       <div
-        class="project-image"
-        [style.background-image]="'url(' + project.imageUrl + ')'"
-      ></div>
-      <div class="project-description">
-        <h3 class="project-title">{{ project.title }}</h3>
-        <div class="technologies-list">
-          {{ project.technologies.join(' | ') }}
-        </div>
-        <p class="description-text">{{ project.description }}</p>
-        <div class="project-links">
-          <a [href]="project.liveUrl" target="_blank" class="btn-primary"
-            >Live</a
-          >
-          <a
-            [href]="project.githubUrl"
-            target="_blank"
-            class="btn-secondary-figma"
-            >Code</a
-          >
+        *ngFor="let project of projects; let i = index"
+        class="project-item"
+        [ngClass]="i % 2 !== 0 ? 'odd' : 'even'"
+      >
+        <div
+          class="project-image"
+          [style.background-image]="'url(' + project.imageUrl + ')'"
+        ></div>
+        <div class="project-description">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <div class="technologies-list">
+            {{ project.technologies.join(' | ') }}
+          </div>
+          <p class="description-text">{{ project.description }}</p>
+          <div class="project-links">
+            <a [href]="project.liveUrl" target="_blank" class="btn-primary"
+              >Live</a
+            >
+            <a
+              [href]="project.githubUrl"
+              target="_blank"
+              class="btn-secondary-figma"
+              >Code</a
+            >
+          </div>
         </div>
       </div>
     </div>

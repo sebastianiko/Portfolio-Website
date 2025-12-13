@@ -2,13 +2,29 @@
 
 :host {
   display: block;
+  --brand-primary: #5988ff;
+  --font-display: "Baloo 2", cursive;
+  --font-body: "Montserrat", sans-serif;
+  --text-dark: #252525;
+  --text-light: #ffffff;
+  --surface-light: #ffffff;
 }
 
 .projects-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
   position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1; /* Ensure content is above ellipses */
 }
 
 .title-my-work {
@@ -18,8 +34,6 @@
   letter-spacing: 0.01em;
   color: #5988ff;
   margin-bottom: 10px;
-  position: relative;
-  z-index: 1;
 }
 
 .subtitle-text {
@@ -28,16 +42,13 @@
   line-height: 120%;
   color: #000000;
   margin-bottom: 60px;
-  position: relative;
-  z-index: 1;
 }
 
 .projects-list {
   display: flex;
   flex-direction: column;
   gap: 150px;
-  position: relative;
-  z-index: 1;
+  width: 100%; /* Ensure list takes up full width of content container */
 }
 
 .project-item {
@@ -173,4 +184,35 @@
   .project-item {
     gap: 100px;
   }
+}
+
+/* --- Ellipse Styles --- */
+.ellipse {
+  position: absolute;
+  background-color: var(--brand-primary);
+  filter: blur(100px);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.ellipse1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+}
+
+.ellipse2 {
+  width: 400px;
+  height: 400px;
+  bottom: -150px;
+  right: -150px;
+}
+
+.ellipse3 {
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
