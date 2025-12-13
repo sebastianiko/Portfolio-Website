@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo&family=Montserrat&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo&family=Montserrat&family=Poppins&display=swap");
 
 :host {
   display: block;
 }
 
 .projects-section {
-  padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -13,7 +12,7 @@
 }
 
 .title-my-work {
-  font-family: 'Baloo', cursive;
+  font-family: "Baloo", cursive;
   font-size: 96px;
   line-height: 100%;
   letter-spacing: 0.01em;
@@ -24,7 +23,7 @@
 }
 
 .subtitle-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 23px;
   line-height: 120%;
   color: #000000;
@@ -63,21 +62,21 @@
 }
 
 .project-title {
-  font-family: 'Baloo', cursive;
+  font-family: "Baloo", cursive;
   font-size: 45px;
   color: #5988ff;
   margin-bottom: 15px;
 }
 
 .technologies-list {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 23px;
   color: #5988ff;
   margin-bottom: 15px;
 }
 
 .description-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 120%;
   color: #000000;
@@ -94,7 +93,7 @@
   height: 58px;
   padding: 15px 30px;
   border-radius: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 23px;
   line-height: 120%;
   text-decoration: none;
