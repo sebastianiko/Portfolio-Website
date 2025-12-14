@@ -1,3 +1,21 @@
+:root {
+  /* Globale Responsive Schriftgrößen */
+  /* H1: Für Sektions-Titel (z.B. "My work", "About me") - Groß, 48px bis 96px */
+  --fs-h1: clamp(48px, 8vw, 96px);
+
+  /* H2: Für Unterüberschriften (z.B. "Join", "Got a problem to solve?") - Mittel, 32px bis 48px */
+  --fs-h2: clamp(32px, 5vw, 48px);
+
+  /* H3: Für kleinere Titel oder Akzente (z.B. in Karten, "Technologies") - Klein, 23px bis 32px */
+  --fs-h3: clamp(23px, 4vw, 32px);
+
+  /* Body: Für normalen Fließtext - 16px bis 20px */
+  --fs-body: clamp(16px, 3vw, 20px);
+
+  /* Small: Für kleine Hinweise, Buttons oder Tags - 14px bis 16px */
+  --fs-small: clamp(14px, 2.5vw, 16px);
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 html, body {

@@ -33,7 +33,7 @@
 
 .title-my-work {
   font-family: "Baloo", cursive;
-  font-size: clamp(48px, 8vw, 96px);
+  font-size: var(--fs-h1);
   line-height: 100%;
   letter-spacing: 0.01em;
   color: #5988ff;
@@ -42,7 +42,7 @@
 
 .subtitle-text {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(16px, 3vw, 23px);
+  font-size: var(--fs-h3);
   line-height: 120%;
   color: #000000;
   margin-bottom: 60px;
@@ -78,21 +78,21 @@
 
 .project-title {
   font-family: "Baloo", cursive;
-  font-size: clamp(28px, 5vw, 45px);
+  font-size: var(--fs-h2);
   color: #5988ff;
   margin-bottom: 15px;
 }
 
 .technologies-list {
   font-family: "Montserrat", sans-serif;
-  font-size: 23px;
+  font-size: var(--fs-h3);
   color: #5988ff;
   margin-bottom: 15px;
 }
 
 .description-text {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: var(--fs-body);
   line-height: 120%;
   color: #000000;
   margin-bottom: 20px;
@@ -109,7 +109,7 @@
   padding: 15px 30px;
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
-  font-size: 23px;
+  font-size: var(--fs-h3);
   line-height: 120%;
   text-decoration: none;
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
