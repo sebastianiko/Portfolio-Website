@@ -230,3 +230,25 @@
   top: 65%;
   left: -50px;
 }
+
+@media (max-width: 767px) {
+  .ellipse1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+  }
+
+  .ellipse2 {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -100px;
+  }
+
+  .ellipse3,
+  .ellipse4,
+  .ellipse5 {
+    display: none;
+  }
+}
