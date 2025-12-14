@@ -125,17 +125,29 @@
 
   .hero-text {
     text-align: left;
+    width: 100%;
+
+    .greeting {
+      font-size: clamp(32px, 4vw, 64px);
+    }
+
+    .title-frontend {
+      font-size: clamp(64px, 12vw, 128px);
+    }
+
+    .title-developer {
+      font-size: clamp(58px, 11vw, 118px);
+    }
   }
 
   .social-scroll-group {
     display: flex;
+    flex-direction: row;
     position: absolute;
-    right: 50px;
-    bottom: 50px;
-    align-items: center;
-    gap: 3rem;
-    height: 330px;
-    flex-direction: column;
+    right: 40px;
+    bottom: 0;
+    align-items: flex-end;
+    gap: 40px;
   }
 
   .scroll-indicator {
@@ -143,10 +155,10 @@
     font-size: var(--fs-body);
     color: #5988ff;
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-grow: 1;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 500px;
 
     span {
       writing-mode: vertical-rl;
@@ -163,7 +175,8 @@
   .social-icons {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 25px;
+    margin-bottom: 20px;
     a {
       text-decoration: none;
       font-family: "Montserrat", sans-serif;
