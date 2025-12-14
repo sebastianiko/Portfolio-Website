@@ -126,17 +126,23 @@
   .hero-text {
     text-align: left;
     width: 100%;
+    max-width: calc(100% - 150px);
+    box-sizing: border-box;
 
     .greeting {
       font-size: clamp(32px, 4vw, 64px);
     }
 
     .title-frontend {
-      font-size: clamp(64px, 12vw, 128px);
+      font-size: clamp(40px, 8vw, 110px);
     }
 
     .title-developer {
-      font-size: clamp(58px, 11vw, 118px);
+      font-size: clamp(
+        36px,
+        7vw,
+        100px
+      ); /* Reduzierte Größe für bessere Harmonie */
     }
   }
 
@@ -148,6 +154,7 @@
     bottom: 0;
     align-items: flex-end;
     gap: 40px;
+    pointer-events: none;
   }
 
   .scroll-indicator {
@@ -159,6 +166,7 @@
     align-items: center;
     gap: 10px;
     height: 500px;
+    pointer-events: auto;
 
     span {
       writing-mode: vertical-rl;
@@ -177,6 +185,7 @@
     flex-direction: column;
     gap: 25px;
     margin-bottom: 20px;
+    pointer-events: auto;
     a {
       text-decoration: none;
       font-family: "Montserrat", sans-serif;
