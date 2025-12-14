@@ -38,7 +38,7 @@
 }
 
 .copyright {
-  font-size: 23px;
+  font-size: var(--fs-body);
   margin: 0;
 }
 
@@ -66,7 +66,7 @@
   left: 50%;
   transform: translateX(-50%);
   color: #ffffff;
-  font-size: 16px;
+  font-size: var(--fs-small);
   text-decoration: underline;
 }
 

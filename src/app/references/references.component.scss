@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo&family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo&family=Montserrat:wght@400;700&display=swap");
 
 :host {
   display: block;
@@ -8,7 +8,12 @@
 .references-section {
   width: 100%;
   min-height: 532px;
-  background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
+  background: linear-gradient(
+    128.94deg,
+    #5988ff -33.96%,
+    #5988ff 36.71%,
+    #0043f0 112.25%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,17 +30,17 @@
 }
 
 h2 {
-  color: #FFFFFF;
-  font-family: 'Baloo', cursive;
-  font-size: 45px;
+  color: #ffffff;
+  font-family: "Baloo", cursive;
+  font-size: var(--fs-h1);
   line-height: 141%;
   margin: 0 0 10px 0;
 }
 
 p {
-  color: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 32px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs-h2);
   line-height: 141%;
   margin: 0 0 40px 0;
 }
@@ -63,8 +68,9 @@ p {
   flex-direction: column;
 }
 
-.name-surname, .project-name {
-  background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+.name-surname,
+.project-name {
+  background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -72,22 +78,22 @@ p {
 }
 
 .name-surname {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: var(--fs-h3);
 }
 
 .project-name {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--fs-small);
 }
 
 .text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  color: #FFFFFF;
+  font-size: var(--fs-body);
+  color: #ffffff;
 }
 
 /* --- Responsive --- */
@@ -98,12 +104,6 @@ p {
   }
   .references-carousel {
     gap: 24px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  p {
-    font-size: 28px;
   }
 }
 
@@ -118,17 +118,5 @@ p {
   }
   .name-container {
     align-items: center;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  p {
-    font-size: 20px;
-  }
-  .name-surname {
-    font-size: 20px;
-  }
-  .text {
-    font-size: 16px;
   }
 }

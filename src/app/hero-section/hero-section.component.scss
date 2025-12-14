@@ -7,9 +7,9 @@
 }
 
 .hero-section {
-    position: relative;
-    overflow: hidden;
-    min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
 .hero-content {
@@ -42,7 +42,7 @@
 
   .greeting {
     font-family: "Montserrat", sans-serif;
-    font-size: 32px;
+    font-size: var(--fs-h2);
     font-weight: 400;
     margin: 0;
   }
@@ -56,11 +56,11 @@
   }
 
   .title-frontend {
-    font-size: 64px; // Adjusted for mobile
+    font-size: clamp(48px, 10vw, 128px);
   }
 
   .title-developer {
-    font-size: 58px; // Adjusted for mobile
+    font-size: clamp(40px, 9vw, 118px);
   }
 }
 
@@ -71,7 +71,7 @@
 // --- Ellipse Styles ---
 .ellipse {
   position: absolute;
-  background-color: #5988FF;
+  background-color: #5988ff;
   filter: blur(100px);
   border-radius: 50%;
   z-index: -1;
@@ -125,18 +125,6 @@
 
   .hero-text {
     text-align: left;
-
-    .greeting {
-      font-size: 64px;
-    }
-
-    .title-frontend {
-      font-size: 128px;
-    }
-
-    .title-developer {
-      font-size: 118px;
-    }
   }
 
   .social-scroll-group {
@@ -152,7 +140,7 @@
 
   .scroll-indicator {
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+    font-size: var(--fs-body);
     color: #5988ff;
     display: flex;
     align-items: center;
@@ -181,7 +169,7 @@
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
       color: #5988ff;
-      font-size: 24px;
+      font-size: var(--fs-body);
     }
   }
 }
