@@ -55,7 +55,7 @@
 }
 
 .availability-headline {
-font-size: var(--fs-h2);
+  font-size: var(--fs-h2);
   color: #5988ff;
   margin: 0;
 }
@@ -83,7 +83,10 @@ font-size: var(--fs-h2);
   }
 }
 
-font-size: var(--fs-body);
+.contact-text-1,
+.contact-text-2 {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
   line-height: 1.6;
   color: var(--text-dark);
   margin: 0;
