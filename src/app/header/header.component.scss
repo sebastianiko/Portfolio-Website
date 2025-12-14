@@ -20,7 +20,6 @@ header {
   width: 100%;
   z-index: 20; // Header context above ellipse (5) but below overlay (100)
   backdrop-filter: blur(32.5px);
-  -webkit-backdrop-filter: blur(32.5px); // Webkit prefix for compatibility
 }
 
 .logo-container,
