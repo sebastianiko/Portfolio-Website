@@ -24,12 +24,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1; /* Ensure content is above ellipses */
+  z-index: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
 }
 
 .title-my-work {
   font-family: "Baloo", cursive;
-  font-size: 96px;
+  font-size: clamp(48px, 8vw, 96px);
   line-height: 100%;
   letter-spacing: 0.01em;
   color: #5988ff;
@@ -38,7 +42,7 @@
 
 .subtitle-text {
   font-family: "Montserrat", sans-serif;
-  font-size: 23px;
+  font-size: clamp(16px, 3vw, 23px);
   line-height: 120%;
   color: #000000;
   margin-bottom: 60px;
@@ -48,7 +52,7 @@
   display: flex;
   flex-direction: column;
   gap: 150px;
-  width: 100%; /* Ensure list takes up full width of content container */
+  width: 100%;
 }
 
 .project-item {
@@ -74,7 +78,7 @@
 
 .project-title {
   font-family: "Baloo", cursive;
-  font-size: 45px;
+  font-size: clamp(28px, 5vw, 45px);
   color: #5988ff;
   margin-bottom: 15px;
 }
@@ -212,7 +216,7 @@
 .ellipse3 {
   width: 250px;
   height: 250px;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
