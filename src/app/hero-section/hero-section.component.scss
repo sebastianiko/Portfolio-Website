@@ -30,6 +30,7 @@
 .hero-photo {
   max-width: 300px;
   margin: 0 auto;
+  height: auto;
 
   img {
     width: 100%;
@@ -109,14 +110,16 @@
     max-width: 1920px; /* Changed from 1440px */
     margin: 0 auto;
     padding-top: 150px; // Adjust padding for desktop
+    min-height: 100vh; /* Make sure it takes at least the full viewport height */
   }
 
   .hero-left {
-    align-self: start;
+    align-self: end; /* Aligns the image to the bottom */
   }
 
   .hero-photo {
     max-width: 100%;
+    height: 100vh;
   }
 
   .hero-photo img {
