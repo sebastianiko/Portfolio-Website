@@ -29,6 +29,7 @@ header {
 }
 
 .logo-container {
+  display: none; // Hidden on mobile
   width: 64px;
   height: 69px;
   img {
@@ -151,6 +152,10 @@ header.overlay-open .logo-container img {
 
 // Desktop layout
 @media (min-width: 768px) {
+  .logo-container {
+    display: block; // Show on desktop
+  }
+
   .menu-icon,
   .mobile-menu-overlay {
     display: none !important;
