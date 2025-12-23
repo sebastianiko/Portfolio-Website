@@ -65,9 +65,43 @@
   }
 }
 
+// --- Mobile Scroll Indicator Styles ---
 .social-scroll-group {
-  display: none; // Hidden on mobile as per instructions
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  pointer-events: auto;
 }
+
+.scroll-indicator {
+  font-family: "Montserrat", sans-serif;
+  color: #5988ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  height: 120px;
+
+  span {
+    writing-mode: vertical-rl;
+    font-size: var(--fs-small); // Assuming var is defined globally
+    letter-spacing: 2px;
+  }
+
+  .scroll-line {
+    width: 2px;
+    background-color: #5988ff;
+    flex-grow: 1;
+  }
+}
+
+.social-icons {
+  display: none; // Hidden on mobile
+}
+
 
 // --- Ellipse Styles ---
 .ellipse {
@@ -100,50 +134,91 @@
   transform: translate(-50%, -50%);
 }
 
-// --- Tablet/Small Laptop Layout ---
-@media (min-width: 768px) and (max-width: 1439.98px) {
-  .hero-photo {
-    max-width: 550px; // Increase image size for this range
-  }
+// --- Tablet/Desktop Layout Adjustments ---
+@media (min-width: 768px) {
+    // Tablet-specific adjustments
+    @media (max-width: 1439.98px) {
+        .hero-photo {
+            max-width: 550px; // Increase image size for this range
+        }
+    }
+
+    // Styles for both Tablet and Desktop
+    .social-scroll-group {
+        flex-direction: row;
+        right: 40px;
+        bottom: 0;
+        align-items: flex-end;
+        gap: 40px;
+        pointer-events: none;
+    }
+
+    .scroll-indicator {
+        font-size: var(--fs-body);
+        gap: 10px;
+        height: 500px;
+        pointer-events: auto;
+
+        span {
+            text-orientation: mixed;
+            font-size: var(--fs-body); // Reset font size for desktop
+            letter-spacing: normal; // Reset letter spacing
+        }
+    }
+
+    .social-icons {
+        display: flex; // Show on desktop
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 20px;
+        pointer-events: auto;
+        a {
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            color: #5988ff;
+            font-size: var(--fs-body);
+        }
+    }
 }
 
-// --- Desktop Layout ---
+
+// --- Desktop-Only Layout ---
 @media (min-width: 1440px) {
   .hero-content {
-    position: relative; // For absolute positioning of children
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    max-width: 1920px; /* Changed from 1440px */
+    max-width: 1920px;
     margin: 0 auto;
-    padding-top: 150px; // Adjust padding for desktop
-    min-height: 100vh; /* Make sure it takes at least the full viewport height */
+    padding-top: 150px;
+    min-height: 100vh;
   }
 
   .hero-left {
-    align-self: end; /* Aligns the image to the bottom */
-    order: 1; /* Ensures image is in the first grid column on desktop */
+    align-self: end;
+    order: 1;
   }
 
   .hero-right {
-    order: 2; /* Ensures text is in the second grid column on desktop */
+    order: 2;
   }
 
   .hero-photo {
     max-width: 100%;
-    margin: 0; /* Remove auto margin to prevent centering issues in grid */
+    margin: 0;
   }
 
   .hero-photo img {
     min-width: 751.67px;
-    display: block; /* Remove potential extra space below image */
+    display: block;
   }
 
   .hero-text {
     text-align: left;
-    width: 100%;
-    max-width: 700px; /* Added for readability and to avoid overlap */
-    margin: 0; /* Adjusted for alignment */
+    max-width: 700px;
+    margin: 0;
     box-sizing: border-box;
 
     .greeting {
@@ -151,60 +226,11 @@
     }
 
     .title-frontend {
-      font-size: clamp(48px, 10vw, 128px); /* Adjusted font size */
+      font-size: clamp(48px, 10vw, 128px);
     }
 
     .title-developer {
-      font-size: clamp(40px, 9vw, 118px); /* Adjusted font size */
-    }
-  }
-
-  .social-scroll-group {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    right: 0; /* Changed from 40px */
-    bottom: 0;
-    align-items: flex-end;
-    gap: 240px; /* Adjusted gap */
-    pointer-events: none;
-  }
-
-  .scroll-indicator {
-    font-family: "Montserrat", sans-serif;
-    font-size: var(--fs-body);
-    color: #5988ff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    height: 500px;
-    pointer-events: auto;
-
-    span {
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
-    }
-
-    .scroll-line {
-      width: 2px;
-      background-color: #5988ff;
-      flex-grow: 1;
-    }
-  }
-
-  .social-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-bottom: 20px;
-    pointer-events: auto;
-    a {
-      text-decoration: none;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 700;
-      color: #5988ff;
-      font-size: var(--fs-body);
+      font-size: clamp(40px, 9vw, 118px);
     }
   }
 }
