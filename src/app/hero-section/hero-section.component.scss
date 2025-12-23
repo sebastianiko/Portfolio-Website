@@ -122,6 +122,11 @@
 
   .hero-left {
     align-self: end; /* Aligns the image to the bottom */
+    order: 1; /* Ensures image is in the first grid column on desktop */
+  }
+
+  .hero-right {
+    order: 2; /* Ensures text is in the second grid column on desktop */
   }
 
   .hero-photo {
