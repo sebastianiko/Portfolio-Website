@@ -1,0 +1,335 @@
+[33mcommit 6fc1274bd293b297da53f4db537e70c9897d1217[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Dec 19 23:55:39 2025 +0100
+
+    editing ellipse 1
+
+[33mcommit 852a5de3ba1aadae7b2399e4d8d3d193f3ae54da[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Mon Dec 15 21:02:56 2025 +0100
+
+    adding padding to scroll bar
+
+[33mcommit a9e90cfe593829d4d32893b73f1b4a869ff38048[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Mon Dec 15 20:51:19 2025 +0100
+
+    adding styles for hero img
+
+[33mcommit 14e6ba5ee13803ac46b17282d60df657653efe72[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Mon Dec 15 20:36:59 2025 +0100
+
+    editing img style from hero section
+
+[33mcommit 80d848655339a937ea649ba3fbf5d46d0ef19d1d[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Mon Dec 15 20:28:02 2025 +0100
+
+    deleting filter for header section
+
+[33mcommit e6a2e95fbbf9a6bb6c6193088fdec8f2253fee2a[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Mon Dec 15 20:23:33 2025 +0100
+
+    adding more screen width for hero section
+
+[33mcommit 61798b7e4b92f32aca5d0270c96def1dbe69b71d[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 14 19:09:13 2025 +0100
+
+    editing hero section design
+
+[33mcommit c2c614ae4dcabd1806601513404aeb49fa256cfe[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 14 18:58:46 2025 +0100
+
+    editing hero section styling
+
+[33mcommit b45313bea7c68598e108c52a427cde4c9f5a51da[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 14 18:41:02 2025 +0100
+
+    deleting css code from header
+
+[33mcommit 67d1c232e6c4d657a6d42b7bd325506521694ae9[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 14 18:33:17 2025 +0100
+
+    editing font responsiveness styling
+
+[33mcommit c61f4742ed003fe56ef7da8a08cd2c0e1df0b83d[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 14 18:29:17 2025 +0100
+
+    editing font style for contact component
+
+[33mcommit f561ce821d9efc468744a48421a55d65a334e854[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 14 18:22:30 2025 +0100
+
+    editing font styles for responsiveness
+
+[33mcommit 672ebcc32e6b0a8569775113b8e6ce8574bae4de[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 14 18:05:06 2025 +0100
+
+    editing responsiveness font style for projects section
+
+[33mcommit 1c3eadb75dc10249538cf2babf642193c1e5dffb[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 14 17:40:39 2025 +0100
+
+    adding responsiveness for ellipse 2
+
+[33mcommit 12023d3d29e0b846be45a65694ac699e4b0babee[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 14 17:37:01 2025 +0100
+
+    editing respinsivestyle for projects
+
+[33mcommit caf1018d505d7e3ad2e41acf2b27887366044a8a[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 14 17:28:31 2025 +0100
+
+    editing button style
+
+[33mcommit 9faf909c00daed56dcd303d333d058327b9b7417[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sat Dec 13 19:15:50 2025 +0100
+
+    adding new ellipes to project section
+
+[33mcommit 2c831cef387350b7d056e9392ef8e1be8b289c0f[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sat Dec 13 19:08:03 2025 +0100
+
+    adding ellipse to project component
+
+[33mcommit 9b029f1508f01dacb66437cabee5791ccf4a34e2[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sat Dec 13 18:51:32 2025 +0100
+
+    deleting padding my work component
+
+[33mcommit 8b95f507d63b77203d56a2056ce77bcf0be43d0e[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sat Dec 13 18:50:52 2025 +0100
+
+    editing my work component
+
+[33mcommit e911887242dc15f1f3ea45ca5b693510cbee4ce8[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sat Dec 13 18:37:53 2025 +0100
+
+    adding about me component
+
+[33mcommit ac68ee07b3df9daf9ace074281af2b9bea4b3e46[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sat Dec 13 18:31:54 2025 +0100
+
+    updating angular
+
+[33mcommit 40015a404e1b32b44e48cad57cd901c20fbe5186[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Dec 12 21:24:19 2025 +0100
+
+    editing responsiveness for footer and skillset
+
+[33mcommit 687504b43c8556dee1082584c1e8c147c0e9dbd4[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Dec 12 21:07:14 2025 +0100
+
+    editing footer
+
+[33mcommit 8ae694ffd1192e6665d2e9c2295f0911c23a3766[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Dec 12 20:52:58 2025 +0100
+
+    delete padding
+
+[33mcommit 869fd59946c77e495058b3bb3d5887fe6b2eec11[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Mon Dec 8 21:51:18 2025 +0100
+
+    adding responsive design for header
+
+[33mcommit d9a47c11a992b3c8eaa8c9cd4131da5750e4fc35[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Mon Dec 8 21:41:19 2025 +0100
+
+    adding new components
+
+[33mcommit d441e27d599fa9bf71ebf0b33a32c6378b9b416b[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 7 19:11:20 2025 +0100
+
+    adding references component
+
+[33mcommit 78fc2faa206b74313c2c8be9c37e75b9a6f5c37b[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Dec 7 18:40:14 2025 +0100
+
+    adding project component
+
+[33mcommit 3674fb2a54e52a01e244bb5699a41bd4528baa7f[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Nov 16 18:21:18 2025 +0100
+
+    adding overflow hidden x
+
+[33mcommit 3372c6990770f76e9ecba8ae3f4a6bfd2402d34b[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Nov 16 18:07:21 2025 +0100
+
+    editing padding skill set
+
+[33mcommit 69db800efdf93e9b1ede4cbbf6a5c3356211f3ad[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Nov 16 18:06:09 2025 +0100
+
+    editing skillset css
+
+[33mcommit 743d8197b5c95b970eec12d8bbbb103db037ac72[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Nov 16 17:32:08 2025 +0100
+
+    adding skillset section
+
+[33mcommit 603797cd8b46e74a224a8640a7078308cd045f1f[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Nov 16 16:55:46 2025 +0100
+
+    adding
+
+[33mcommit 891c8b77d6ca50cacb2d3eda496274c0bfb53102[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sat Sep 27 17:30:03 2025 +0200
+
+    editing contact font color
+
+[33mcommit d9077b09c31b58e97c6c9f2c7b35820ee1dcfbbc[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sat Sep 27 17:17:13 2025 +0200
+
+    adding contact component
+
+[33mcommit 91a1d6f03da88c383b878fb35a304b36e4ebf9c9[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sat Sep 27 17:13:44 2025 +0200
+
+    adding contact component
+
+[33mcommit 7a5d90171ca8f947d703710e646e7919ca9f5864[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sat Sep 27 16:10:51 2025 +0200
+
+    adding fonts to head
+
+[33mcommit f6d1c3a37f57299db4c3522d786782758a2daaed[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Sep 26 23:04:38 2025 +0200
+
+    adding contact icons
+
+[33mcommit fdacab665c04481d0de07fb4b7aea66d380df16f[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Sep 26 23:00:12 2025 +0200
+
+    editing hero img
+
+[33mcommit a0c13bf71ae02f8de09f6232ea6ffcd25498eaa9[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Sep 26 22:52:36 2025 +0200
+
+        feat: Adjust hero section styling for desktop layout
+
+[33mcommit becae65f5f7df6f6bea04fc86dae3f2ee8bfffdb[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Sep 26 22:52:25 2025 +0200
+
+    editing hero img
+
+[33mcommit 683e54b27d1e81a00cf8c6e65ca769825ce18b00[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Sep 26 22:27:00 2025 +0200
+
+    adding hero section
+
+[33mcommit fbd582d897946bbdf0019a5a17dc33a74022e1ce[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Sep 26 22:07:18 2025 +0200
+
+    editing header
+
+[33mcommit d6903ceaaf53da33929726af5d2dcf4b1ec1b142[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Sep 26 21:39:28 2025 +0200
+
+    editing logo colour
+
+[33mcommit 68e26dd4f0e00681c1f9010accaa122539eb2c56[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Sep 26 21:27:31 2025 +0200
+
+    editing header mobile
+
+[33mcommit 9b677aaf5812da0dd2b93f943a29cbc771d386c6[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Sep 26 21:21:01 2025 +0200
+
+    gap editing header
+
+[33mcommit d2b570d5ad958f3faaed32ccbc3b17aa4e5b269f[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Fri Sep 26 21:12:08 2025 +0200
+
+    editing header
+
+[33mcommit 0fa5b927e49fe46865876b7cb63db8a8ce3d5e7a[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Mon Sep 22 23:01:09 2025 +0200
+
+    clear all components
+
+[33mcommit 7cfecf73a08abd5524888640f61be4b862226582[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Mon Sep 22 22:58:36 2025 +0200
+
+    clear all components
+
+[33mcommit d90d5b4af10d228e4b36d8f60145cbef25cf8a66[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Sep 21 21:18:42 2025 +0200
+
+    adding header items
+
+[33mcommit 9f04e4809a7fb31ae9fafc74113c8a2092f524bc[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Sep 21 21:12:14 2025 +0200
+
+    editing hero component
+
+[33mcommit dc6ead33011893a4401badbfcf74cd75906c91fd[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Sep 21 20:45:02 2025 +0200
+
+    first styling of hearo component
+
+[33mcommit 7d5a35d8d228c69985b1aab99a426b48b8aeddd9[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Sep 21 20:27:46 2025 +0200
+
+    first edits of the components
+
+[33mcommit 7a10ee384677d9fe4591385c016a067210c2931d[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Sep 21 20:11:34 2025 +0200
+
+    create components
+
+[33mcommit 29dded5f453311d2f8019326bdb4d4efe274a43f[m
+Author: sebastian_iwasieczko@web.de <you@example.com>
+Date:   Sun Sep 21 20:02:52 2025 +0200
+
+    initial commit
