@@ -74,7 +74,7 @@
   gap: 20px;
   position: absolute;
   right: 20px;
-  bottom: 40px;
+  bottom: 0px;
   pointer-events: auto;
 }
 
@@ -85,7 +85,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  height: 120px;
+  height: 160px;
 
   span {
     writing-mode: vertical-rl;
@@ -103,7 +103,6 @@
 .social-icons {
   display: none; // Hidden on mobile
 }
-
 
 // --- Ellipse Styles ---
 .ellipse {
@@ -138,52 +137,51 @@
 
 // --- Tablet/Desktop Layout Adjustments ---
 @media (min-width: 768px) {
-    // Tablet-specific adjustments
-    @media (max-width: 1439.98px) {
-        .hero-photo {
-            max-width: 550px; // Increase image size for this range
-        }
+  // Tablet-specific adjustments
+  @media (max-width: 1439.98px) {
+    .hero-photo {
+      max-width: 550px; // Increase image size for this range
     }
+  }
 
-    // Styles for both Tablet and Desktop
-    .social-scroll-group {
-        flex-direction: row;
-        right: 40px;
-        bottom: 0;
-        align-items: flex-end;
-        gap: 40px;
-        pointer-events: none;
+  // Styles for both Tablet and Desktop
+  .social-scroll-group {
+    flex-direction: row;
+    right: 40px;
+    bottom: 0;
+    align-items: flex-end;
+    gap: 40px;
+    pointer-events: none;
+  }
+
+  .scroll-indicator {
+    font-size: var(--fs-body);
+    gap: 10px;
+    height: 500px;
+    pointer-events: auto;
+
+    span {
+      text-orientation: mixed;
+      font-size: var(--fs-body); // Reset font size for desktop
+      letter-spacing: normal; // Reset letter spacing
     }
+  }
 
-    .scroll-indicator {
-        font-size: var(--fs-body);
-        gap: 10px;
-        height: 500px;
-        pointer-events: auto;
-
-        span {
-            text-orientation: mixed;
-            font-size: var(--fs-body); // Reset font size for desktop
-            letter-spacing: normal; // Reset letter spacing
-        }
+  .social-icons {
+    display: flex; // Show on desktop
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 20px;
+    pointer-events: auto;
+    a {
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      color: #5988ff;
+      font-size: var(--fs-body);
     }
-
-    .social-icons {
-        display: flex; // Show on desktop
-        flex-direction: column;
-        gap: 25px;
-        margin-bottom: 20px;
-        pointer-events: auto;
-        a {
-            text-decoration: none;
-            font-family: "Montserrat", sans-serif;
-            font-weight: 700;
-            color: #5988ff;
-            font-size: var(--fs-body);
-        }
-    }
+  }
 }
-
 
 // --- Desktop-Only Layout ---
 @media (min-width: 1440px) {
