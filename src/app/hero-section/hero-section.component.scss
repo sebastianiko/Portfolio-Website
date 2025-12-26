@@ -3,24 +3,21 @@
 :host {
   display: block;
   width: 100%;
-  min-height: 100vh;
 }
 
 .hero-section {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
 }
 
 .hero-content {
   position: relative;
   z-index: 10;
-  padding: 117px 0 0 0;
+  padding: 120px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-sizing: border-box;
 }
 
@@ -30,12 +27,15 @@
 }
 
 .hero-photo {
-  max-width: 300px;
   margin: 0 auto;
   height: auto;
 
   img {
     width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    display: block;
   }
 }
 
@@ -73,7 +73,7 @@
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  right: 20px;
+  right: 16px;
   bottom: 0px;
   pointer-events: auto;
 }
@@ -189,10 +189,10 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: end;
     max-width: 1920px;
     margin: 0 auto;
-    padding-top: 150px;
+    padding-top: 120px;
     min-height: 100vh;
   }
 
@@ -203,16 +203,18 @@
 
   .hero-right {
     order: 2;
+    align-self: center;
   }
 
   .hero-photo {
     max-width: 100%;
     margin: 0;
+    display: flex;
+    align-items: flex-end;
   }
 
   .hero-photo img {
-    min-width: 751.67px;
-    display: block;
+    max-height: 85vh;
   }
 
   .hero-text {
