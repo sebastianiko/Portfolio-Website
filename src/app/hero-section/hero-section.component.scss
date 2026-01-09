@@ -127,14 +127,6 @@
   right: -150px;
 }
 
-.ellipse3 {
-  width: 250px;
-  height: 250px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 // --- Tablet/Desktop Layout Adjustments ---
 @media (min-width: 768px) {
   // Tablet-specific adjustments
@@ -189,7 +181,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: end;
+    align-items: center;
     max-width: 1920px;
     margin: 0 auto;
     padding-top: 120px;
@@ -197,20 +189,19 @@
   }
 
   .hero-left {
-    align-self: end;
     order: 1;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
   }
 
   .hero-right {
     order: 2;
-    align-self: center;
   }
 
   .hero-photo {
     max-width: 100%;
     margin: 0;
-    display: flex;
-    align-items: flex-end;
   }
 
   .hero-photo img {
