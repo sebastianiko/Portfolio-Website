@@ -1,142 +1,185 @@
 :host {
-  --brand-primary: #5988ff;
-  --font-display: "Baloo 2", cursive;
-  --font-body: "Montserrat", sans-serif;
-  --text-dark: #252525;
-  --text-light: #ffffff;
-  --surface-light: #ffffff;
+  background-color: transparent; // Ensure component host doesn't block the background
 }
 
 .contact-section {
-  width: 100%;
-  padding: 80px 0 80px 0;
-  background: var(--bg-gradient-blue);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 100px 50px;
+  overflow: hidden;
+  background: var(--bg-gradient-blue); // Apply the desired background gradient
 }
 
 .contact-content {
-  max-width: 1440px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-}
-
-.contact-left,
-.contact-right {
+  justify-content: space-between;
+  max-width: 1241px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  gap: 80px;
+  z-index: 1;
 }
 
-.contact-left {
-  align-items: center;
-  text-align: center;
-  gap: 2rem;
+.contact-text {
+  max-width: 450px;
 }
 
-.contact-right {
-  gap: 1.5rem;
-}
-
-.contact-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--brand-primary);
-  line-height: 1.1;
-  margin: 0;
-  font-size: var(--fs-h1);
-}
-
-.availability-group {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.availability-headline {
-  font-size: var(--fs-h2);
+.contact-text h1 {
+  font-family: "Baloo 2", cursive;
+  font-size: 90px;
   color: #5988ff;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
-.availability-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
-.icon-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-body);
-  font-size: var(--fs-small);
-  color: #5988ff;
-
-  svg {
-    width: 48px;
-    height: 48px;
-    stroke: var(--brand-primary);
-  }
-}
-
-.contact-text-1,
-.contact-text-2 {
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-  line-height: 1.6;
-  color: var(--text-dark);
-  margin: 0;
-}
-
-.send-message-button {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: var(--fs-h3);
+.contact-text h2 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: var(--text-light);
-  background-color: var(--brand-primary);
-  padding: 16px 32px;
-  border: none;
+  font-size: 32px;
+  color: #5988ff;
+  margin-bottom: 20px;
+}
+
+.contact-text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+.contact-form-container {
+  max-width: 617px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  border: 1px solid #5988ff;
   border-radius: 10px;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  align-self: flex-start;
-  margin-top: 1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  &:hover,
-  &:focus-visible {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--brand-primary);
-    outline-offset: 4px;
-  }
+  background: #ffffff;
+  padding: 15px 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
-// --- Desktop Layout ---
-@media (min-width: 768px) {
+input[type="text"],
+input[type="email"] {
+  height: 50px;
+}
+
+textarea {
+  height: 202px;
+  resize: none;
+}
+
+.privacy-policy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.privacy-policy input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.privacy-policy label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.privacy-policy a {
+  color: #5988ff;
+  text-decoration: underline;
+}
+
+.btn-send {
+  width: auto;
+  height: 58px;
+  padding: 15px 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-send:disabled {
+  border: 2px solid #bbbbbb;
+  background-color: #f0f0f0;
+  color: #bbbbbb;
+  cursor: not-allowed;
+}
+
+.btn-send:not(:disabled) {
+  background: #5988ff;
+  color: #ffffff;
+  border: 2px solid #5988ff;
+}
+
+.error-message {
+  color: red;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.checkbox-error {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 20px;
+  }
+
   .contact-content {
-    display: grid;
-    grid-template-columns: 606px 1fr;
-    gap: 6rem;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
   }
 
-  .contact-left {
-    align-items: flex-start;
-    text-align: left;
+  .contact-text {
+    max-width: 100%;
+    text-align: center;
   }
 
-  .availability-icons {
-    flex-direction: row;
-    gap: 48px; // Figma gap
+  .contact-text h1 {
+    font-size: 45px;
+  }
+
+  .contact-text h2 {
+    font-size: 23px;
+  }
+
+  .contact-form-container {
+    max-width: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    height: 40px;
+  }
+
+  textarea {
+    height: 162px;
+  }
+
+  .btn-send {
+    width: 100%;
+    height: 54px;
+    padding: 13px 24px;
+  }
+
+  .privacy-policy label {
+    font-size: 12px;
+  }
+
+  .error-message {
+    font-size: 10px;
   }
 }
