@@ -1,4 +1,7 @@
 :root {
+  /* Gradient für Hintergründe */
+  --bg-gradient-blue: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
+
   /* Globale Responsive Schriftgrößen */
   /* H1: Für Sektions-Titel (z.B. "My work", "About me") - Groß, 48px bis 96px */
   --fs-h1: clamp(48px, 8vw, 96px);
