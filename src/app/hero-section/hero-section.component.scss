@@ -108,17 +108,21 @@
 // --- Ellipse Styles ---
 .ellipse {
   position: absolute;
-  background-color: #5988ff;
-  filter: blur(100px);
+  // filter: blur(80px);
   border-radius: 50%;
-  z-index: -1;
 }
 
 .ellipse1 {
-  width: 300px;
-  height: 300px;
-  top: -100px;
-  left: -100px;
+  width: 892px;
+  height: 892px;
+  left: -199px;
+  top: -71px;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
 }
 
 .ellipse2 {
@@ -126,6 +130,18 @@
   height: 400px;
   bottom: -150px;
   right: -150px;
+  background-color: #5988ff;
+}
+
+// --- Mobile Ellipse Overrides ---
+@media (max-width: 768px) {
+  .ellipse1 {
+    width: 69.85px;
+    height: 69.85px;
+    transform: rotate(81.57deg);
+    top: 20%;
+    left: 60%;
+  }
 }
 
 // --- Tablet/Desktop Layout Adjustments ---
